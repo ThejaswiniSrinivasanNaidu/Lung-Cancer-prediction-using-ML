@@ -2,6 +2,16 @@
 
 This repository contains a machine learning project for predicting lung cancer risk using survey data. The implementation is in a Jupyter Notebook (`MAYA_final.ipynb`) and uses the dataset `survey lung cancer.csv` to train and evaluate multiple models, including a custom stacking classifier called "Maya Hybrid." The project employs advanced feature engineering, handles class imbalance with SMOTE, and evaluates models using accuracy, precision, recall, and F1-score. The best-performing model is a Random Forest with an accuracy of 0.9126.
 
+## Features
+
+- Predicts lung cancer risk from patient survey data via a Jupyter notebook (`MAYA_final.ipynb`)
+- Custom "Maya Hybrid" stacking classifier combining SVC, Decision Tree, and KNN
+- Handles class imbalance with SMOTE and adds polynomial feature interactions
+- Feature selection via mutual information
+- Trains and compares Logistic Regression, KNN, Decision Tree, SVM, Naive Bayes, Random Forest, and Maya Hybrid
+- Hyperparameter tuning with RandomizedSearchCV
+- Best model (Random Forest) reaches 91.26% accuracy, with histogram and confusion-matrix visualizations
+
 ## Motivation
 
 Lung cancer is a leading cause of cancer-related deaths globally, with early detection being critical for improving patient outcomes. This project aims to develop a predictive model to identify high-risk individuals based on survey data, enabling early screening and intervention. By leveraging features like smoking habits, age, and health indicators, the model supports clinicians and researchers in addressing this public health challenge.
@@ -67,3 +77,14 @@ The project analyzes a dataset of patient attributes to predict lung cancer risk
 Install the required packages:
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn scikit-optimize imbalanced-learn
+```
+
+## Usage
+
+1. Install the requirements (see above).
+2. Open `MAYA_final.ipynb` in Jupyter Notebook or Jupyter Lab.
+3. Run the notebook cells in order to preprocess `data/survey lung cancer.csv`, train the models, and view the evaluation metrics and visualizations.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
